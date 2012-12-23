@@ -54,7 +54,6 @@ class ZP_MySQLi_Db extends ZP_Load {
 	public function connect($db) {
 		if(!self::$connection) {
 			self::$connection = mysqli_connect($db["dbHost"], $db["dbUser"], $db["dbPwd"], $db["dbName"]);
-			mysqli_set_charset(self::$connection, "utf8");
 		}
 
 		return self::$connection;
